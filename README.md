@@ -1,1 +1,3 @@
-# pxt-banana
+# banana
+The banana library.
+
