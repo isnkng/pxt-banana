@@ -60,4 +60,9 @@ namespace musicalScore {
     export function bbbb() {
         
     }
+
+    //% blockId=musicalScore_aaaa block="aaaa"
+    export function aaaa(): void{
+        
+    }
 }
