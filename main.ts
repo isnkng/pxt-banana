@@ -40,8 +40,8 @@ namespace musicalScore {
 
     }
 
-    //% blockId=musicalScore_test block="test"
-    export function test(): String{
-        return "test";
+    //% blockId=melody_on_event block="test"
+    export function test() {
+
     }
 }
