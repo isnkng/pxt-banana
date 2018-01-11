@@ -1,3 +1,3 @@
-# banana
-The banana library.
+# musicalScore
+The musicalScore library.
 
