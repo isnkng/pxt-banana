@@ -1,5 +1,5 @@
 /**
- * Types of tropical fruit
+ * Types of musicalScore
  */
 enum TropicalFruit {
     //% block=banana
@@ -28,5 +28,10 @@ namespace tropic {
     //% blockId=tropic_peel block="peel a %fruit"
     export function peel(fruit: TropicalFruit): boolean {
         return (fruit == TropicalFruit.Banana);
+    }
+    
+    //% blockId=tropic_unko block="unko a %fruit"
+    export function unko(fruit: TropicalFruit): boolean{
+        return true;
     }
 }
