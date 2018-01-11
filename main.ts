@@ -31,8 +31,8 @@ namespace musicalScore {
     }
     
     //% blockId=musicalScore_unko block="unko a %fruit"
-    export function unko(fruit: TropicalFruit): boolean{
-        return true;
+    export function unko(fruit: TropicalFruit): void{
+        // return true;
     }
 
     //% blockId=musicalScore_show block="show a %fruit"
