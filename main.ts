@@ -67,7 +67,7 @@ namespace musicalScore {
     }
 
     //% blockId=musicalScore_cccc block="cccc"
-    export function cccc(): String{
+    export function cccc(): string {
         return "cccc"
     }
 }
