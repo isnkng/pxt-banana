@@ -65,4 +65,9 @@ namespace musicalScore {
     export function aaaa(): void{
         
     }
+
+    //% blockId=musicalScore_cccc block="cccc"
+    export function cccc(): String{
+        return "cccc"
+    }
 }
