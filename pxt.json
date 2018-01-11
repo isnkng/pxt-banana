@@ -1,7 +1,7 @@
 {
-    "name": "banana",
+    "name": "musicalScore",
     "version": "1.0.0",
-    "description": "banana",
+    "description": "musicalScore",
     "license": "MIT",
    "dependencies": {
         "core": "*"
