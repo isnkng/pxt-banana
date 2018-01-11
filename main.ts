@@ -71,10 +71,9 @@ namespace musicalScore {
         return "cccc"
     }
 
-        //% blockId=melody_on_event block="music on %value"
+        //% blockId=musicalScore_on_event block="musical event"
     //% help=music/on-event weight=59
-    export function onEvent(value: MusicEvent, handler: Action) {
-        control.onEvent(2000, value, handler);
+    export function onEvent(handler: Action) {
     }
 
 }
