@@ -30,7 +30,7 @@ namespace musicalScore {
         return (fruit == TropicalFruit.Banana);
     }
     
-    //% blockId=tropic_unko block="unko a %fruit"
+    //% blockId=musicalScore_unko block="unko a %fruit"
     export function unko(fruit: TropicalFruit): boolean{
         return true;
     }
