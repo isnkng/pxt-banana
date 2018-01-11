@@ -40,6 +40,17 @@ namespace musicalScore {
 
     }
 
+    //% blockId=musicalScore_aaaa block="aaaa"
+    export function aaaa(): String{
+        return "aaaa"
+    }
+
+
+    //% blockId=musicalScore_bbbb block="bbbb"
+    export function bbbb() {
+        
+    }
+
     //% blockId=melody_on_event block="test"
     export function test() {
 
