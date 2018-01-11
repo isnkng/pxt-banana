@@ -35,10 +35,8 @@ namespace musicalScore {
         return true;
     }
 
-    //% blockId=melody_on_event block="music on %value"
-    //% help=music/on-event weight=59
-    export function onEvent(value: MusicEvent, handler: Action) {
-        control.onEvent(MICROBIT_MELODY_ID, value, handler);
+    export function show(){
+        return 0;
     }
 
 }
