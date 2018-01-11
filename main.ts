@@ -34,4 +34,11 @@ namespace musicalScore {
     export function unko(fruit: TropicalFruit): boolean{
         return true;
     }
+
+    //% blockId=melody_on_event block="music on %value"
+    //% help=music/on-event weight=59
+    export function onEvent(value: MusicEvent, handler: Action) {
+        control.onEvent(MICROBIT_MELODY_ID, value, handler);
+    }
+
 }
