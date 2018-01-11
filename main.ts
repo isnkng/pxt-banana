@@ -37,6 +37,11 @@ namespace musicalScore {
 
     //% blockId=musicalScore_show block="show a %fruit"
     export function show(fruit: TropicalFruit): void{
+
     }
 
+    //% blockId=musicalScore_test block="test"
+    export function test(): String{
+        return "test";
+    }
 }
