@@ -37,7 +37,7 @@ namespace musicalScore {
 
     //% blockId=musicalScore_show block="show a %fruit"
     export function show(){
-        return 0;
+        return true;
     }
 
 }
