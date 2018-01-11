@@ -14,7 +14,7 @@ enum TropicalFruit {
  * Pick some fruit and peel it.
  */
 //% weight=70 icon="\uf1db" color=#EC7505
-namespace tropic {
+namespace musicalScore {
     /**
      * Pick a fruit
      */
