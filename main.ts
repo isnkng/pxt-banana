@@ -127,8 +127,14 @@ enum BeatFraction {
     Double = 32,
     //% block="4",
     Breve = 64,
-    //% block="3",
-    DottedQuarter = 128
+    //% block="3"
+    DottedHalf = Double + Whole,
+    //% block="1 1/2"
+    DottedQuarter = Whole + Half,
+    //% block="3/4"
+    DottedEighth = Half + Quarter,
+    //% block="3/8" 
+    DottedSixteenth = Quarter + Quarter
 }
 
 //% weight=70 icon="\uf1db" color=#EC7505
@@ -228,7 +234,10 @@ namespace music {
             case BeatFraction.Sixteenth: return beat / 16;
             case BeatFraction.Double: return beat * 2;
             case BeatFraction.Breve: return beat * 4;
-            case BeatFraction.DottedQuarter: return beat * 3;
+            case BeatFraction.DottedHalf: return beat * 3;
+            case BeatFraction.DottedQuarter: return beat * 3/2;
+            case BeatFraction.DottedEighth: return beat * 3/4;
+            case BeatFraction.DottedSixteenth: return beat * 3/8;
             default: return beat;
         }
     }
