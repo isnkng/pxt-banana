@@ -128,13 +128,13 @@ enum BeatFraction {
     //% block="4",
     Breve = 64,
     //% block="3"
-    DottedHalf = 128,
-    //% block="1 1/2"
-    DottedQuarter = 256,
+    DottedHalf = 3,
+    //% block="3/2"
+    DottedQuarter = 32,
     //% block="3/4"
-    DottedEighth = 512,
+    DottedEighth = 34,
     //% block="3/8" 
-    DottedSixteenth = 1024
+    DottedSixteenth = 38
 }
 
 //% color=#D83B01 weight=98 icon="\uf025"
