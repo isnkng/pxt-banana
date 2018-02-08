@@ -137,8 +137,8 @@ enum BeatFraction {
     DottedSixteenth = 38
 }
 
-//% color=#D83B01 weight=98 icon="\uf025"
-namespace music {
+//% color=red weight=98 icon="\uf025"
+namespace DottedNote {
 
     // //% blockId=musicalScore_bbbb block="bbbb"
     // export function bbbb() {
