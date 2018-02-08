@@ -139,6 +139,10 @@ enum BeatFraction {
 
 //% color=#D83B01 weight=98 icon="\uf025"
 namespace DottedNote {
+    let beatsPerMinute: number = 120;
+    let freqTable: number[] = [];
+    let _playTone: (frequency: number, duration: number) => void;
+    const MICROBIT_MELODY_ID = 2000;
 
     // //% blockId=musicalScore_bbbb block="bbbb"
     // export function bbbb() {
@@ -162,62 +166,12 @@ namespace DottedNote {
     // let _playTone: (frequency: number, duration: number) => void;
     // const MICROBIT_MELODY_ID = 2000;
 
-    /**
-     * Plays a tone through pin ``P0`` for the given duration.
-     * @param frequency pitch of the tone to play in Hertz (Hz)
-     * @param ms tone duration in milliseconds (ms)
-     */
-    //% help=music/play-tone weight=90
-    //% blockId=device_play_note block="play|tone %note=device_note|for %duration=device_beat" blockGap=8
-    //% parts="headphone"
-    //% useEnumVal=1
-    export function playTone(frequency: number, ms: number): void {
-        if (_playTone) _playTone(frequency, ms);
-        else pins.analogPitch(frequency, ms);
-    }
-
-    /**
-     * Plays a tone through pin ``P0``.
-     * @param frequency pitch of the tone to play in Hertz (Hz)
-     */
-    //% help=music/ring-tone weight=80
-    //% blockId=device_ring block="ring tone (Hz)|%note=device_note" blockGap=8
-    //% parts="headphone"
-    //% useEnumVal=1
-    export function ringTone(frequency: number): void {
-        playTone(frequency, 0);
-    }
-
-    /**
-     * Rests (plays nothing) for a specified time through pin ``P0``.
-     * @param ms rest duration in milliseconds (ms)
-     */
-    //% help=music/rest weight=79
-    //% blockId=device_rest block="rest(ms)|%duration=device_beat"
-    //% parts="headphone"
-    export function rest(ms: number): void {
-        playTone(0, ms);
-    }
-
-
-    /**
-     * Gets the frequency of a note.
-     * @param name the note name, eg: Note.C
-     */
-    //% weight=50 help=music/note-frequency
-    //% blockId=device_note block="%note"
-    //% shim=TD_ID
-    //% note.fieldEditor="note" note.defl="262"
-    //% useEnumVal=1
-    export function noteFrequency(name: Note): number {
-        return name;
-    }
 
     function init() {
         if (beatsPerMinute <= 0) beatsPerMinute = 120;
         if (freqTable.length == 0) freqTable = [31, 33, 35, 37, 39, 41, 44, 46, 49, 52, 55, 58, 62, 65, 69, 73, 78, 82, 87, 92, 98, 104, 110, 117, 123, 131, 139, 147, 156, 165, 175, 185, 196, 208, 220, 233, 247, 262, 277, 294, 311, 330, 349, 370, 392, 415, 440, 466, 494, 523, 554, 587, 622, 659, 698, 740, 784, 831, 880, 932, 988, 1047, 1109, 1175, 1245, 1319, 1397, 1480, 1568, 1661, 1760, 1865, 1976, 2093, 2217, 2349, 2489, 2637, 2794, 2960, 3136, 3322, 3520, 3729, 3951, 4186]
     }
-
+    
     /**
      * Returns the duration of a beat in milli-seconds
      */
