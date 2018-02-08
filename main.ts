@@ -128,39 +128,39 @@ enum BeatFraction {
     //% block="4",
     Breve = 64,
     //% block="3"
-    DottedHalf = Double + Whole,
+    DottedHalf = 128,
     //% block="1 1/2"
-    DottedQuarter = Whole + Half,
+    DottedQuarter = 256,
     //% block="3/4"
-    DottedEighth = Half + Quarter,
+    DottedEighth = 512,
     //% block="3/8" 
-    DottedSixteenth = Quarter + Quarter
+    DottedSixteenth = 1024
 }
 
-//% weight=70 icon="\uf1db" color=#EC7505
+//% color=#D83B01 weight=98 icon="\uf025"
 namespace music {
 
-    //% blockId=musicalScore_bbbb block="bbbb"
-    export function bbbb() {
-    }
+    // //% blockId=musicalScore_bbbb block="bbbb"
+    // export function bbbb() {
+    // }
 
-    //% blockId=musicalScore_aaaa block="aaaa"
-    export function aaaa(): void{
-    }
+    // //% blockId=musicalScore_aaaa block="aaaa"
+    // export function aaaa(): void{
+    // }
 
-    //% blockId=musicalScore_cccc block="cccc"
-    export function cccc(): string {
-        return "cccc"
-    }
+    // //% blockId=musicalScore_cccc block="cccc"
+    // export function cccc(): string {
+    //     return "cccc"
+    // }
 
-        //% blockId=musicalScore_on_event block="musical event"
-    //% help=music/on-event
-    export function onEvent(handler: Action): void {
-    }
-    let beatsPerMinute: number = 120;
-    let freqTable: number[] = [];
-    let _playTone: (frequency: number, duration: number) => void;
-    const MICROBIT_MELODY_ID = 2000;
+    //     //% blockId=musicalScore_on_event block="musical event"
+    // //% help=music/on-event
+    // export function onEvent(handler: Action): void {
+    // }
+    // let beatsPerMinute: number = 120;
+    // let freqTable: number[] = [];
+    // let _playTone: (frequency: number, duration: number) => void;
+    // const MICROBIT_MELODY_ID = 2000;
 
     /**
      * Plays a tone through pin ``P0`` for the given duration.
