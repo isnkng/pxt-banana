@@ -137,7 +137,7 @@ enum BeatFraction {
     DottedSixteenth = 38
 }
 
-//% color=red weight=98 icon="\uf025"
+//% color=#D83B01 weight=98 icon="\uf025"
 namespace DottedNote {
 
     // //% blockId=musicalScore_bbbb block="bbbb"
@@ -240,15 +240,5 @@ namespace DottedNote {
             case BeatFraction.DottedSixteenth: return beat * 3/8;
             default: return beat;
         }
-    }
-
-    /**
-     * Returns the tempo in beats per minute. Tempo is the speed (bpm = beats per minute) at which notes play. The larger the tempo value, the faster the notes will play.
-     */
-    //% help=music/tempo weight=40
-    //% blockId=device_tempo block="tempo (bpm)" blockGap=8
-    export function tempo(): number {
-        init();
-        return beatsPerMinute;
     }
 }
