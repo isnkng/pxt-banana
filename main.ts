@@ -31,18 +31,18 @@ namespace beats {
     let _playTone: (frequency: number, duration: number) => void;
     const MICROBIT_MELODY_ID = 2000;
 
-    // //% blockId=musicalScore_bbbb block="bbbb"
-    // export function bbbb() {
-    // }
+    //% blockId=musicalScore_bbbb block="bbbb"
+    export function bbbb() {
+    }
 
-    // //% blockId=musicalScore_aaaa block="aaaa"
-    // export function aaaa(): void{
-    // }
+    //% blockId=musicalScore_aaaa block="aaaa"
+    export function aaaa(): void{
+    }
 
-    // //% blockId=musicalScore_cccc block="cccc"
-    // export function cccc(): string {
-    //     return "cccc"
-    // }
+    //% blockId=musicalScore_cccc block="cccc"
+    export function cccc(): string {
+        return "cccc"
+    }
 
     //     //% blockId=musicalScore_on_event block="musical event"
     // //% help=music/on-event
