@@ -47,18 +47,12 @@ namespace beats {
     // }
 
     //% blockId=beats_TrebleClef block="ト音記号"
-    export function TrebleClef(handler: Action): void {
-
+    export function TrebleClef(): void {
     }
 
     //% blockId=beats_BassClef block="ヘ音記号 BPM|%value"
     //% bpm.min=4 bpm.max=400
-    export function BassClef(handler: Action,bpm: number): void {
-        init();
-        if (bpm > 0) {
-            beatsPerMinute = Math.max(1, bpm);
-        }
-        setTempo(bpm);
+    export function BassClef(): void {
     }
 
     //% blockId=musicalScore_cccc block="cccc"
