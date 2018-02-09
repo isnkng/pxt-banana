@@ -14,14 +14,16 @@ enum Beat {
     Double = 32,
     //% block="4",
     Breve = 64,
+    //% block="6"
+    DottedWhole = 128,
     //% block="3"
-    DottedHalf = 128,
-    //% block="3/2"
-    DottedQuarter = 256,
+    DottedHalf = 256,
+    //% block="1と1/2"
+    DottedQuarter = 512,
     //% block="3/4"
-    DottedEighth = 512,
+    DottedEighth = 1024,
     //% block="3/8" 
-    DottedSixteenth = 1024
+    DottedSixteenth = 2048
 }
 
 //% color=#D83B01 weight=98 icon="\uf025"
@@ -50,9 +52,9 @@ namespace beats {
     export function BassClef(): void {
     }
 
-    //% blockId=musicalScore_cccc block="cccc"
-    export function cccc(): string {
-        return "cccc"
+    //% blockId=beats_unko block="unko"
+    export function unko(): string {
+        return "unko"
     }
 
     //     //% blockId=musicalScore_on_event block="musical event"
@@ -71,7 +73,7 @@ namespace beats {
      */
     //% help=music/beat weight=49
     //% blockId=beats block="%fraction|beat"
-    export function notesbeat(fraction?: Beat): number {
+    export function dottedbeats(fraction?: Beat): number {
         init();
         if (fraction == null) fraction = Beat.Whole;
         let beat = 60000 / beatsPerMinute;
@@ -82,6 +84,7 @@ namespace beats {
             case Beat.Sixteenth: return beat / 16;
             case Beat.Double: return beat * 2;
             case Beat.Breve: return beat * 4;
+            case Beat.DottedWhole: return beat * 6;
             case Beat.DottedHalf: return beat * 3;
             case Beat.DottedQuarter: return beat * 3/2;
             case Beat.DottedEighth: return beat * 3/4;
