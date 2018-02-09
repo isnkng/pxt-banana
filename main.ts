@@ -31,8 +31,8 @@ namespace beats {
     let _playTone: (frequency: number, duration: number) => void;
     const MICROBIT_MELODY_ID = 2000;
 
-    //% blockId=musicalScore_bbbb block="ト音記号"
-    export function TrebleClef() {
+    //% blockId=beats_TrebleClef block="ト音記号"
+    export function TrebleClef(handler: Action): void {
     }
 
     //% blockId=musicalScore_aaaa block="aaaa"
