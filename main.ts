@@ -31,12 +31,20 @@ namespace beats {
     let _playTone: (frequency: number, duration: number) => void;
     const MICROBIT_MELODY_ID = 2000;
 
-    //% blockId=beats_TrebleClef block="ト音記号"
-    export function TrebleClef(handler: Action): void {
+    //% blockId=beats_TrebleClef block="ト音記号 BPM|%value"
+    export function TrebleClef(handler: Action,bpm: number): void {
+        init();
+        if (bpm > 0) {
+            beatsPerMinute = Math.max(1, bpm);
+        }
     }
 
-    //% blockId=beats_BassClef block="ヘ音記号"
-    export function BassClef(): void {
+    //% blockId=beats_BassClef block="ヘ音記号 BPM|%value"
+    export function BassClef(bpm: number): void {
+        init();
+        if (bpm > 0) {
+            beatsPerMinute = Math.max(1, bpm);
+        }
     }
 
     //% blockId=musicalScore_cccc block="cccc"
