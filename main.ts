@@ -32,7 +32,8 @@ namespace beats {
     const MICROBIT_MELODY_ID = 2000;
 
     //% blockId=beats_TrebleClef block="ト音記号 BPM|%value"
-    export function TrebleClef(handler: Action,bpm: number): void {
+    //% bpm.min=4 bpm.max=400
+    export function TrebleClef(bpm: number): void {
         init();
         if (bpm > 0) {
             beatsPerMinute = Math.max(1, bpm);
@@ -40,6 +41,7 @@ namespace beats {
     }
 
     //% blockId=beats_BassClef block="ヘ音記号 BPM|%value"
+    //% bpm.min=4 bpm.max=400
     export function BassClef(bpm: number): void {
         init();
         if (bpm > 0) {
