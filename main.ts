@@ -63,7 +63,7 @@ namespace beats {
      * Returns the duration of a beat in milli-seconds
      */
     //% help=music/beat weight=49
-    //% blockId=device_beat block="%fraction|beat"
+    //% blockId=beats block="%fraction|beat"
     export function notesbeat(fraction?: Beat): number {
         init();
         if (fraction == null) fraction = Beat.Whole;
