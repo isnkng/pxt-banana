@@ -32,7 +32,7 @@ namespace beats {
     const MICROBIT_MELODY_ID = 2000;
 
     //% blockId=musicalScore_bbbb block="bbbb"
-    export function bbbb() {
+    export function ト音() {
     }
 
     //% blockId=musicalScore_aaaa block="aaaa"
@@ -48,11 +48,6 @@ namespace beats {
     // //% help=music/on-event
     // export function onEvent(handler: Action): void {
     // }
-    // let beatsPerMinute: number = 120;
-    // let freqTable: number[] = [];
-    // let _playTone: (frequency: number, duration: number) => void;
-    // const MICROBIT_MELODY_ID = 2000;
-
 
     function init() {
         if (beatsPerMinute <= 0) beatsPerMinute = 120;
@@ -82,4 +77,5 @@ namespace beats {
             default: return beat;
         }
     }
+
 }
