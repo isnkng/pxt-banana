@@ -35,8 +35,8 @@ namespace beats {
     export function TrebleClef(handler: Action): void {
     }
 
-    //% blockId=musicalScore_aaaa block="aaaa"
-    export function aaaa(): void{
+    //% blockId=beats_BassClef block="ヘ音記号"
+    export function BassClef(): void {
     }
 
     //% blockId=musicalScore_cccc block="cccc"
