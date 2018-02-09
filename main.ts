@@ -46,15 +46,14 @@ namespace beats {
     //     setTempo(bpm);
     // }
 
-    //% blockId=beats_TrebleClef block="ト音記号 BPM|%value"
-    //% bpm.min=4 bpm.max=400
-    export function TrebleClef(body: Action): void {
+    //% blockId=beats_TrebleClef block="ト音記号"
+    export function TrebleClef(handler: Action): void {
 
     }
 
     //% blockId=beats_BassClef block="ヘ音記号 BPM|%value"
     //% bpm.min=4 bpm.max=400
-    export function BassClef(bpm: number): void {
+    export function BassClef(handler: Action,bpm: number): void {
         init();
         if (bpm > 0) {
             beatsPerMinute = Math.max(1, bpm);
