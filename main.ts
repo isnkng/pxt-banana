@@ -15,15 +15,15 @@ enum Beat {
     //% block="4",
     Breve = 64,
     //% block="6"
-    DottedWhole = 128,
+    DottedW = 128,
     //% block="3"
-    DottedHalf = 256,
+    DottedH = 256,
     //% block="1と1/2"
-    DottedQuarter = 512,
+    DottedQ = 512,
     //% block="3/4"
-    DottedEighth = 1024,
+    DottedE = 1024,
     //% block="3/8" 
-    DottedSixteenth = 2048
+    DottedS = 2048
 }
 
 //% color=#D83B01 weight=98 icon="\uf025"
@@ -84,11 +84,11 @@ namespace beats {
             case Beat.Sixteenth: return beat / 16;
             case Beat.Double: return beat * 2;
             case Beat.Breve: return beat * 4;
-            case Beat.DottedWhole: return beat * 6;
-            case Beat.DottedHalf: return beat * 3;
-            case Beat.DottedQuarter: return beat * 3/2;
-            case Beat.DottedEighth: return beat * 3/4;
-            case Beat.DottedSixteenth: return beat * 3/8;
+            case Beat.DottedW: return beat * 6;
+            case Beat.DottedH: return beat * 3;
+            case Beat.DottedQ: return beat * 3/2;
+            case Beat.DottedE: return beat * 3/4;
+            case Beat.DottedS: return beat * 3/8;
             default: return beat;
         }
     }
